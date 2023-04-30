@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    <style>
+        body {
+        font-family: Arial, serif;
+      }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+        .table-responsive {
+            overflow-x: auto;
+        }
+        
+    </style>
+
+
+</head>
+<body style="background-color: rgb(157, 227, 176);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center mb-5">Flipkart BankOffers</h1>
+            </div>
+            <div class="col-md-4 form-group">
+                <label for="bank"><b>Select Bank Name:</b></label>
+                <select class="form-control" id="bank">
+                    <option value="Axis">Axis</option>
+                    <option value="SBI">SBI</option>
+                    <option value="ICICI">ICICI</option>
+                    <option value="Kotak">Kotak</option>
+                </select>
+            </div>
+            <div class="col-md-4 form-group">
+                <label for="CD"><b>Select Card Type:</b></label>
+                <select class="form-control" id="CD">
+                    <option value="Flipkart">Flipkart</option>
+                    <option value="Credit">Credit</option>
+                    <option value="Debit">Debit</option>
+                </select>
+            </div>
+            <div class="col-md-4 form-group">
+                <label for="pg"><b>Page Number:</b></label>
+                <input class="form-control" type="number" name="pg" id="pg" value="1">
+            </div>
+            <div class="col-md-4 form-group">
+                <label for="minp"><b>Min Price:</b></label>
+                <input class="form-control" type="number" name="minp" id="minp" value="7000">
+            </div>
+            <div class="col-md-4 form-group">
+                <label for="maxp"><b>Max Price:</b></label>
+                <input class="form-control" type="number" name="maxp" id="maxp" value="20000">
+            </div>
+            <div class="col-md-12 text-center">
+                <button class="btn btn-primary" onClick="myFun()">Submit</button>
+            </div>
+        </div>
+    </div>
+    <div class="container-lg" >
+        <h1 id="mypage" style="text-align: center;font-size: larger;"><b>PLEASE WAIT</b></h1>
+    </div>
+</body>
+</html>
